@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的基本使用</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!-- 【vue的基本使用】：将需要绑定的变量写到双大括号中 -->
+<div id="app">
+    <p>{{message}}</p>
+</div>
+
+<script>
+   // 【vue的基本使用】：创建一个新的 Vue 实例。其中有两个属性，el（element）属性表示绑定的元素，data属性中保存元素的属性
+   var app = new Vue({
+     el: '#app',
+     data: {
+       message: 'Hello Vue!'
+     }
+   });
+</script>
+
+</body>
+</html>

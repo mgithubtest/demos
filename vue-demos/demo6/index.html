@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>vue组件的使用2</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!--【vue组件的使用2】：循环names数组，将数组元素和自定义组件的name属性绑定-->
+<div id="app">
+        <ol>
+            <todo-item
+                    v-for="name in names"
+                    v-bind:name="name">
+            </todo-item>
+        </ol>
+</div>
+
+<script>
+    // 【vue组件的使用2】：定义name属性，在template中使用name属性。
+    Vue.component('todo-item', {
+      props: ['name'],
+      template: '<li>{{ name }}</li>'
+    });
+    new Vue({
+        el: '#app',
+        data: {
+            names:['zhangsan','lisi','wangwu']
+        }
+    });
+</script>
+
+</body>
+</html>

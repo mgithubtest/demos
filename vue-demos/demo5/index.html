@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>vue组件的使用</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!--【vue组件的使用】：使用组件 -->
+<div id="app">
+    <ol>
+        <todo-item></todo-item>
+    </ol>
+</div>
+
+<script>
+    // 【vue组件的使用】：使用 Vue.component 创建组件。这个方法接收 2 个参数。第一个参数是组件名，第二个参数是组件对象。
+    // 注意：必须在生成 Vue 实例之前创建组件，不然 Vue 实例找不到组件
+    Vue.component('todo-item', {
+        template: '<li>这是个待办项</li>'
+    });
+    new Vue({
+        el: '#app'
+    });
+</script>
+
+</body>
+</html>

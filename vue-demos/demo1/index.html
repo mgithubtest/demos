@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>vue常用指令1：v-if的使用</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!-- 【vue常用指令1：v-if的使用】：v-if 是 vue 的 4 个常用指令之一，用来控制元素是否显示。v-if 绑定一个 data 对象的属性（一般为布尔值）表示显示与否 -->
+<div id="app">
+    <p v-if="seen">{{message}}</p>
+</div>
+
+<script>
+   // 【vue常用指令1：v-if的使用】：定义 seen 的值为 false 来隐藏 p 元素
+   var app = new Vue({
+     el: '#app',
+     data: {
+       message: 'Hello Vue!',
+       seen:false
+     }
+   });
+</script>
+
+</body>
+</html>

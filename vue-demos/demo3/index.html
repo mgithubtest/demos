@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>vue常用指令3：v-on的使用</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!-- 【vue常用指令3：v-on的使用】：v-on 是 vue 的 4 个常用指令之一，用来绑定一个事件监听器。在 v-on 后面添加监听器，在属性值中添加事件触发的方法 -->
+<div id="app">
+    <p v-on:click="change">{{description}}</p>
+</div>
+
+<script>
+   // 【vue常用指令3：v-on的使用】：在 methods 中定义方法
+   var app = new Vue({
+     el: '#app',
+     data:{
+       description:'My name is zhangsan.'
+     },
+     methods:{
+       change:function(){
+         app.description = 'My name is lisi.';
+       }
+     }
+   });
+</script>
+
+</body>
+</html>

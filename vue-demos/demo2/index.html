@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>vue常用指令2：v-bind的使用</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!-- 【vue常用指令2：v-bind的使用】：v-bind 是 vue 的 4 个常用指令之一，用来绑定属性 -->
+<div id="app">
+    <p v-bind:title="title">{{message}}</p>
+</div>
+
+<script>
+   // 【vue常用指令2：v-bind的使用】：设置title
+   var app = new Vue({
+     el: '#app',
+     data: {
+       message: 'Hello Vue!',
+       title:'Hi'
+     }
+   });
+</script>
+
+</body>
+</html>

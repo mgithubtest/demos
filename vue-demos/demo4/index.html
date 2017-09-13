@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>vue常用指令4：v-for的使用</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!-- 【vue常用指令4：v-for的使用】：v-for 是 vue 的 4 个常用指令之一，用来循环。使用 in 来遍历 -->
+<div id="app">
+    <ol>
+        <li v-for="name in names">{{name}}</li>
+    </ol>
+</div>
+
+<script>
+   // 【vue常用指令4：v-for的使用】：定义 names 数组
+   var app = new Vue({
+     el: '#app',
+     data: {
+       names:['zhangsan','lisi','wangwu']
+     }
+   });
+</script>
+
+</body>
+</html>
